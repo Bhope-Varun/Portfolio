@@ -1,3 +1,4 @@
+import profileImage from "../assets/bhope_varun.png";
 import React, { useState, useRef } from 'react';
 import { motion } from 'motion/react';
 import { Download, Mail, Layers, Sparkles, Terminal, Code2, ArrowUpRight, Camera, Trash2, Edit2, ShieldAlert } from 'lucide-react';
