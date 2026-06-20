@@ -1,4 +1,3 @@
-import profileImage from "../assets/bhope_varun.png";
 import React, { useState, useRef } from 'react';
 import { motion } from 'motion/react';
 import { Download, Mail, Layers, Sparkles, Terminal, Code2, ArrowUpRight, Camera, Trash2, Edit2, ShieldAlert } from 'lucide-react';
@@ -31,7 +30,7 @@ export default function Hero() {
       setImgSrc('/bhope_varun.jpeg');
       setImageErrorCount(2);
     } else if (imageErrorCount === 2) {
-      setImgSrc('/assets/bhope_varun.png');
+      setImgSrc('/bhope_varun.png');
       setImageErrorCount(3);
     } else {
       setImgFailed(true);
