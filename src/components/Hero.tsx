@@ -6,7 +6,7 @@ import { useAdminMode } from '../hooks/useAdminMode';
 
 export default function Hero() {
   const [imgSrc, setImgSrc] = useState<string>('/bhope_varun.png');
-  });
+
   const [isCustomImg, setIsCustomImg] = useState<boolean>(() => {
     return typeof window !== 'undefined' ? !!localStorage.getItem('profile_avatar_data') : false;
   });
