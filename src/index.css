@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Custom global overrides for premium experience */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+/* Printable resume layout overrides */
+@media print {
+  /* Hide standard screen elements completely */
+  nav, header, footer, section, main, #hero, #about, #skills, #experience, #projects, #certifications, #resume, #contact {
+    display: none !important;
+  }
+  
+  /* Show only the printable resume root container */
+  #printable-resume-container {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    background: white !important;
+    color: black !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  html, body {
+    width: 100% !important;
+    background: white !important;
+    color: black !important;
+    font-size: 10.5pt !important;
+    line-height: 1.35 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Reset standard margining to perfect single-page layout dimensions */
+  @page {
+    size: portrait;
+    margin: 0.5in !important;
+  }
+}
+
